@@ -1,0 +1,81 @@
+{
+  "version": "3",
+  "packages": {
+    "specifiers": {
+      "jsr:@std/assert@^0.225.2": "jsr:@std/assert@0.225.3",
+      "jsr:@std/assert@^0.225.3": "jsr:@std/assert@0.225.3",
+      "jsr:@std/bytes@^1.0.0-rc.3": "jsr:@std/bytes@1.0.2",
+      "jsr:@std/bytes@^1.0.1-rc.3": "jsr:@std/bytes@1.0.2",
+      "jsr:@std/encoding@0.224.3": "jsr:@std/encoding@0.224.3",
+      "jsr:@std/encoding@^0.224.3": "jsr:@std/encoding@0.224.3",
+      "jsr:@std/http@0.224.2": "jsr:@std/http@0.224.2",
+      "jsr:@std/io@^0.224.0": "jsr:@std/io@0.224.3",
+      "jsr:@std/media-types@0.224.1": "jsr:@std/media-types@0.224.1",
+      "jsr:@std/path@0.225.1": "jsr:@std/path@0.225.1",
+      "jsr:@std/streams@0.224.1": "jsr:@std/streams@0.224.1"
+    },
+    "jsr": {
+      "@std/assert@0.225.3": {
+        "integrity": "b3c2847aecf6955b50644cdb9cf072004ea3d1998dd7579fc0acb99dbb23bd4f"
+      },
+      "@std/bytes@1.0.2": {
+        "integrity": "fbdee322bbd8c599a6af186a1603b3355e59a5fb1baa139f8f4c3c9a1b3e3d57"
+      },
+      "@std/encoding@0.224.3": {
+        "integrity": "5e861b6d81be5359fad4155e591acf17c0207b595112d1840998bb9f476dbdaf"
+      },
+      "@std/http@0.224.2": {
+        "integrity": "7cab08ed3edaa9d0bcd25f302dcee21975e24dedbd19fbee092498387a30d521",
+        "dependencies": [
+          "jsr:@std/encoding@^0.224.3"
+        ]
+      },
+      "@std/io@0.224.3": {
+        "integrity": "b402edeb99c6b3778d9ae3e9927bc9085b170b41e5a09bbb7064ab2ee394ae2f",
+        "dependencies": [
+          "jsr:@std/bytes@^1.0.1-rc.3"
+        ]
+      },
+      "@std/media-types@0.224.1": {
+        "integrity": "9e69a5daed37c5b5c6d3ce4731dc191f80e67f79bed392b0957d1d03b87f11e1"
+      },
+      "@std/path@0.225.1": {
+        "integrity": "8c3220635a73730eb51fe43de9e10b79e2724a5bb8638b9355d35ae012fd9429",
+        "dependencies": [
+          "jsr:@std/assert@^0.225.2"
+        ]
+      },
+      "@std/streams@0.224.1": {
+        "integrity": "e8565a376ae3888f60770cd09e480952ec7c349007aed81b8f7165424ce2195f",
+        "dependencies": [
+          "jsr:@std/assert@^0.225.3",
+          "jsr:@std/bytes@^1.0.0-rc.3",
+          "jsr:@std/io@^0.224.0"
+        ]
+      }
+    }
+  },
+  "redirects": {
+    "https://deno.land/x/xserver/src/context.ts": "https://deno.land/x/xserver@5.4.1/src/context.ts",
+    "https://deno.land/x/xserver/src/mod.ts": "https://deno.land/x/xserver@5.4.1/src/mod.ts",
+    "https://deno.land/x/xserver/src/plugin.ts": "https://deno.land/x/xserver@5.4.1/src/plugin.ts"
+  },
+  "remote": {
+    "https://deno.land/x/xserver@5.4.1/src/cache.ts": "7acf1392203f180364d4eb4de025506a41fe55c531a55999403a90c036220670",
+    "https://deno.land/x/xserver@5.4.1/src/context.ts": "7af4ce473a5fd86610abc4fc28ef956f50b0aaa877813ae787edab09ad651fd5",
+    "https://deno.land/x/xserver@5.4.1/src/cors.ts": "e20483e1c371ebc62b639952a660f725272b7f1ee64db6aa8f2545f83edf16c0",
+    "https://deno.land/x/xserver@5.4.1/src/defenders.ts": "05ca40ebb1613a395d1e1d06db895c7ff21680a696ebf82a19b11ce8c49a0d59",
+    "https://deno.land/x/xserver@5.4.1/src/deps.ts": "815ea4519e7cf1b07439b29d95daddf728392f161ebd29dd812162b7333b0298",
+    "https://deno.land/x/xserver@5.4.1/src/file.ts": "9222a947c9518962a1f5a2193a2da1269eae550aaca7015d799c295dedab382e",
+    "https://deno.land/x/xserver@5.4.1/src/forwarded.ts": "c129d1e52a506e22dc0c5ac00e901fde856876a10a157f4bd3e0d3c9187bb043",
+    "https://deno.land/x/xserver@5.4.1/src/handle.ts": "1588b8caeb3a395776bd61e506f4e110240d94e1674e63c2db0c6b000f420de6",
+    "https://deno.land/x/xserver@5.4.1/src/handler.ts": "52a7ce7d485593a1f5ea323eb5fc492d2676b56ae2e65351ef4160878fb483ef",
+    "https://deno.land/x/xserver@5.4.1/src/mod.ts": "a3d648943fb99a7bd658307009e2d2209ff848ab4a777323122f627285e1304b",
+    "https://deno.land/x/xserver@5.4.1/src/normalize.ts": "3625c99ba7de0dbf78fbba6d1b9e4ee640bc3910b05a41a01e4fa08dfcdde055",
+    "https://deno.land/x/xserver@5.4.1/src/payload.ts": "da35fd0f4ef03dbb07c08d86bccb517c3898584b7a856813f919dc24cfbe2cc3",
+    "https://deno.land/x/xserver@5.4.1/src/plugin.ts": "18926877c9f6742555f85bf19a5095409b500e7c6e3e29806409e054c1261146",
+    "https://deno.land/x/xserver@5.4.1/src/router.ts": "932812cde2573aa537f6294a2ad413ffda0a4a61d5a7ea207690a9adaed20737",
+    "https://deno.land/x/xserver@5.4.1/src/session.ts": "41e7f87e57013da169f52903343f3c12c983d2ff692bcd52a1925f3be10e93d8",
+    "https://deno.land/x/xserver@5.4.1/src/socket.ts": "7b43f48c296f11466afc01dd3dbe6930256f93a3911335ec3d5228ecce964132"
+  }
+}
