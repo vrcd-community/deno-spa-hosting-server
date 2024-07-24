@@ -43,5 +43,10 @@ function serveTrace(request: Request, info: Deno.ServeHandlerInfo) {
       connection: info.remoteAddr,
     },
     timestamp: Date.now(),
-  }, null, 2))
+  }, null, 2), {
+    headers: {
+      'server': 'vrcd-deno-spa-hosting-server (https://github.com/vrcd-community/deno-spa-hosting-server) (Powered By xserver (https://github.com/xeaone/server))',
+      'content-type': 'application/json',
+    }
+  })
 }
