@@ -1,6 +1,6 @@
 {
   "imports": {
-    "xserver/": "https://deno.land/x/xserver/src/"
+    "xserver/": "https://deno.land/x/xserver@5.4.1/src/"
   },
   "tasks": {
     "dev": "deno run --allow-net --allow-read --allow-env --watch main.ts"
