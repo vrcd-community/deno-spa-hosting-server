@@ -17,9 +17,15 @@ serverHeader.any('/*', true)
 handler.add(serverHeader)
 handler.add(file)
 
-Server((request, info) => {
-  logRequest(request, info)
+Server(async (request, info) => {
+  const response = await serveRequest(request, info)
 
+  logRequest(request, response, info)
+
+  return response
+})
+
+function serveRequest(request: Request, info: Deno.ServeHandlerInfo) {
   const requestUrl = new URL(request.url)
 
   if (request.method === 'GET' && requestUrl.pathname === '/x-server-cgi/trace') {
@@ -27,7 +33,7 @@ Server((request, info) => {
   }
 
   return handler.handle(request)
-})
+}
 
 function serveTrace(request: Request, info: Deno.ServeHandlerInfo) {
   return new Response(JSON.stringify({

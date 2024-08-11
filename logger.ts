@@ -1,4 +1,4 @@
-export default function logRequest(request: Request, info: Deno.ServeHandlerInfo) {
+export default function logRequest(request: Request, response: Response, info: Deno.ServeHandlerInfo) {
   const requestUrl = new URL(request.url)
 
   const path = requestUrl.pathname
@@ -21,6 +21,12 @@ export default function logRequest(request: Request, info: Deno.ServeHandlerInfo
     headers[key] = value
   })
 
+  const responseHeaders: Record<string, string> = {}
+
+  response.headers.forEach((value, key) => {
+    responseHeaders[key] = value
+  })
+
   const requestTimestamp = Date.now()
 
   const log: Log = {
@@ -29,6 +35,8 @@ export default function logRequest(request: Request, info: Deno.ServeHandlerInfo
     method,
     'client_ip': clientIp,
     'request-timestamp': String(requestTimestamp),
+    'response-headers': responseHeaders,
+    'response-status': response.status
   }
 
   console.log(JSON.stringify(log))
@@ -82,6 +90,8 @@ function postLog(
 
 interface Log {
   'headers': Record<string, string | undefined>
+  'response-headers': Record<string, string | undefined>
+  'response-status': number
   'url': {
     path: string
     protocol: string
@@ -89,7 +99,7 @@ interface Log {
   }
   'method': string
   'client_ip': string
-  'request-timestamp': string
+  'request-timestamp': string,
 }
 
 interface LoggerOptions {
